@@ -1,55 +1,93 @@
-<!-- スタバ風カスタムリッチメニュー（LIFF）サンプル -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>スタバ風メニュー</title>
+  <title>Mother's Day Gift</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #fff;
-    }
-    .container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      height: 100vh;
     }
-    .banner {
+
+    .left {
+      width: 60%;
+    }
+
+    .left img {
       width: 100%;
-      max-width: 480px;
+      height: 100%;
+      object-fit: cover;
     }
-    .buttons {
+
+    .right {
+      width: 40%;
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .tab-header {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 20px;
-      width: 80%;
+      justify-content: space-around;
+      background-color: #eaeaea;
+      padding: 12px 0;
+      font-weight: bold;
     }
-    .btn {
-      padding: 16px;
-      background-color: #00704A;
-      color: white;
-      border: none;
-      font-size: 18px;
+
+    .menu-box {
+      margin-top: 40px;
+    }
+
+    .menu-item {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      cursor: pointer;
+      text-align: left;
     }
-    .btn:hover {
-      background-color: #005837;
+
+    .menu-item h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+    }
+
+    .menu-item p {
+      margin: 0;
+      font-size: 13px;
+      color: #007040;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://example.com/starbucks-banner.jpg" alt="Mother's Day Gift" class="banner">
-    <div class="buttons">
-      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/card/'">支払う・入金する</button>
-      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/mobileorder/'">モバイルオーダーする</button>
-      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/gift/'">LINEギフトを贈る</button>
+
+  <div class="left">
+    <img src="./mothers_day.jpg" alt="Mother's Day Gift">
+  </div>
+
+  <div class="right">
+    <div class="tab-header">
+      <div>サービス</div>
+      <div>商品メニュー</div>
+    </div>
+
+    <div class="menu-box">
+      <div class="menu-item">
+        <h3>支払う・入金する</h3>
+        <p>LINE Starbucks Card</p>
+      </div>
+      <div class="menu-item">
+        <h3>モバイルオーダーする</h3>
+        <p>LINE Starbucks Order & Pay</p>
+      </div>
+      <div class="menu-item">
+        <h3>LINEギフトを贈る</h3>
+        <p>LINE Gift</p>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
