@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mother's Day Gift</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
+    }
+
+    .container {
       display: flex;
-      height: 100vh;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .left {
@@ -17,77 +25,49 @@
 
     .left img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
 
     .right {
       width: 40%;
-      background-color: #f9f9f9;
-      padding: 40px 20px;
+      padding: 20px;
       box-sizing: border-box;
     }
 
-    .tab-header {
-      display: flex;
-      justify-content: space-around;
-      background-color: #eaeaea;
-      padding: 12px 0;
-      font-weight: bold;
-    }
-
-    .menu-box {
-      margin-top: 40px;
-    }
-
-    .menu-item {
-      margin: 20px 0;
-      padding: 20px;
-      background-color: white;
-      border: 1px solid #ddd;
+    .button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 12px;
+      background-color: #007042;
+      color: white;
+      text-align: center;
       border-radius: 8px;
-      text-align: left;
-    }
-
-    .menu-item h3 {
-      margin: 0 0 5px;
+      text-decoration: none;
       font-size: 16px;
     }
 
-    .menu-item p {
-      margin: 0;
-      font-size: 13px;
-      color: #007040;
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left, .right {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="left">
-    <img src="./mothers_day.jpg" alt="Mother's Day Gift">
-  </div>
-
-  <div class="right">
-    <div class="tab-header">
-      <div>サービス</div>
-      <div>商品メニュー</div>
+  <div class="container">
+    <div class="left">
+      <img src="mothers_day.jpg" alt="Mother's Day Gift" />
     </div>
-
-    <div class="menu-box">
-      <div class="menu-item">
-        <h3>支払う・入金する</h3>
-        <p>LINE Starbucks Card</p>
-      </div>
-      <div class="menu-item">
-        <h3>モバイルオーダーする</h3>
-        <p>LINE Starbucks Order & Pay</p>
-      </div>
-      <div class="menu-item">
-        <h3>LINEギフトを贈る</h3>
-        <p>LINE Gift</p>
-      </div>
+    <div class="right">
+      <a class="button" href="#">支払う・入金する</a>
+      <a class="button" href="#">モバイルオーダーする</a>
+      <a class="button" href="#">LINEギフトを贈る</a>
     </div>
   </div>
-
 </body>
 </html>
