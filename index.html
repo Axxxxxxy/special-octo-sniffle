@@ -1,0 +1,55 @@
+<!-- スタバ風カスタムリッチメニュー（LIFF）サンプル -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スタバ風メニュー</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .banner {
+      width: 100%;
+      max-width: 480px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 20px;
+      width: 80%;
+    }
+    .btn {
+      padding: 16px;
+      background-color: #00704A;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #005837;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://example.com/starbucks-banner.jpg" alt="Mother's Day Gift" class="banner">
+    <div class="buttons">
+      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/card/'">支払う・入金する</button>
+      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/mobileorder/'">モバイルオーダーする</button>
+      <button class="btn" onclick="window.location.href='https://www.starbucks.co.jp/gift/'">LINEギフトを贈る</button>
+    </div>
+  </div>
+</body>
+</html>
