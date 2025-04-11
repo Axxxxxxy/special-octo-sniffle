@@ -3,11 +3,30 @@ body {
   font-family: sans-serif;
 }
 
+.tabs {
+  display: flex;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 3px solid black;
+}
+
 .container {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .left {
@@ -22,54 +41,36 @@ body {
 
 .right {
   width: 40%;
-  padding: 20px;
+  padding-left: 20px;
   box-sizing: border-box;
   background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .button {
   display: block;
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 12px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
-  color: #000;
   text-decoration: none;
-  font-size: 16px;
-  border: 1px solid #ddd;
+  background-color: white;
+  color: black;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
 }
 
-.button span {
-  display: block;
-  font-size: 13px;
-  color: #00b14f;
+.button:hover {
+  background-color: #e0f2e9;
 }
 
-.tab {
-  display: flex;
-  justify-content: center;
-  background-color: #f6f6f6;
+.title {
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.tab div {
-  flex: 1;
-  padding: 12px;
-  text-align: center;
-  border-bottom: 3px solid #ccc;
-}
-
-.tab .active {
-  border-bottom: 3px solid #000;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .left, .right {
-    width: 100%;
-  }
+.subtext {
+  color: #00aa55;
+  font-size: 0.9em;
 }
