@@ -1,4 +1,4 @@
-/* 全体レイアウト */
+/* 全体設定 */
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ body {
   display: block;
 }
 
-/* メインコンテンツ */
+/* メインレイアウト */
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -35,39 +35,45 @@ body {
   margin: 0 auto;
 }
 
-/* 左画像（メインビジュアル） */
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
 .main-image {
   width: 100%;
-  max-width: 600px;
-  height: auto;
   display: block;
 }
 
-/* ボタンエリア */
-.btn {
+.btn img {
   width: 100%;
-  max-width: 300px;
+  height: auto;
   display: block;
-  margin: 10px auto;
+  border: none;
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: center;
   }
 
-  .main-image,
-  .btn {
-    max-width: 100%;
+  .left,
+  .right {
+    width: 100%;
   }
 
-  .tabs {
-    flex-direction: row;
-  }
-
-  .tab {
-    max-width: 50%;
+  .right {
+    padding: 10px;
+    gap: 16px;
   }
 }
