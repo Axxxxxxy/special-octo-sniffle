@@ -1,54 +1,63 @@
-/* リセット＆共通 */
+/* 全体リセット */
 body {
   margin: 0;
+  padding: 0;
+  background: #fff;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* タブグループ全体 */
-.tab-group {
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  font-size: 16px;
-}
-
-/* ラジオボタンは非表示 */
-input[type="radio"] {
-  display: none;
-}
-
-/* ラベルの見た目 */
-.tab-labels {
+/* タブエリア */
+.tabs {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.tab-labels label {
-  flex: 1;
-  text-align: center;
-  padding: 12px 0;
-  background-color: #f1f1f1;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
+/* メイン構造 */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* アクティブなタブラベル */
-#tab1:checked ~ .tab-labels label[for="tab1"],
-#tab2:checked ~ .tab-labels label[for="tab2"] {
-  background-color: #ffffff;
-  border-bottom: 2px solid #000000;
+.left {
+  width: 60%;
 }
 
-/* タブコンテンツ */
-.tab-content {
-  display: none;
-  padding: 20px;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-
-/* チェックされたタブだけ表示 */
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2 {
+.left img {
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+.right {
+  width: 40%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .right {
+    padding: 16px;
+  }
 }
