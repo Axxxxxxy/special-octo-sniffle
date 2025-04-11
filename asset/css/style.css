@@ -29,53 +29,55 @@ body {
 /* メインコンテンツ */
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* 左の背景画像 */
 .left {
   width: 60%;
 }
-.left img {
+
+.main-image {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-/* 右のボタン画像 */
 .right {
   width: 40%;
-  background-color: #fff;
-  padding: 20px 10px;
+  padding: 20px;
   box-sizing: border-box;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
 }
-.right a img {
+
+.btn {
+  display: block;
+  width: 100%;
+}
+
+.btn img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* スマホ対応：最小幅375px対応 */
-@media (max-width: 767px) {
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
   .container {
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .left {
+  .left,
+  .right {
     width: 100%;
   }
 
   .right {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .tab {
-    max-width: none;
-    width: 50%;
+    padding: 16px;
   }
 }
