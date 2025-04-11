@@ -4,16 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mother's Day Gift</title>
-  <link rel="stylesheet" href="asset/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <img src="images/mothers_day.jpg" alt="Mother's Day Gift" class="main-image" />
 
-    <!-- ボタンリンク（画像上のクリックエリア） -->
-    <a href="https://impartial-hydrangea-2e7.notion.site/_A-1d1a1384e14280a5a250c0d552469152" class="btn btn1" target="_blank" aria-label="支払う・入金する"></a>
-    <a href="https://impartial-hydrangea-2e7.notion.site/_A-1d1a1384e14280a5a250c0d552469152" class="btn btn2" target="_blank" aria-label="モバイルオーダーする"></a>
-    <a href="https://impartial-hydrangea-2e7.notion.site/_C-1d2a1384e142804d821ff1296ea26447" class="btn btn3" target="_blank" aria-label="LINEギフトを贈る"></a>
+<div class="tab-group">
+  <input type="radio" name="tabs" id="tab1" checked>
+  <input type="radio" name="tabs" id="tab2">
+
+  <div class="tab-labels">
+    <label for="tab1">サービス</label>
+    <label for="tab2">商品メニュー</label>
   </div>
+
+  <div class="tab-content" id="content1">
+    <!-- サービス内容をここに -->
+    <p>こちらはサービス内容の表示例です。</p>
+  </div>
+  <div class="tab-content" id="content2">
+    <!-- 商品メニュー内容をここに -->
+    <p>こちらは商品メニューの表示例です。</p>
+  </div>
+</div>
+
 </body>
 </html>
