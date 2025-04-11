@@ -11,124 +11,104 @@ body {
     min-width: 375px;
 }
 
-.container {
-    width: 100%;
-    max-width: 900px;
+/* メインコンテナ */
+.main-container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Tab styling */
-.tab-container {
+/* タブ */
+.tabs {
     display: flex;
     width: 100%;
 }
 
-.tab-item {
-    flex: 1;
-    text-align: center;
+.tab {
+    width: 50%;
     padding: 15px 0;
+    text-align: center;
     font-weight: bold;
-    background-color: #ffffff;
-    cursor: pointer;
+    color: #333;
 }
 
-.tab-item.active {
+.tab-service {
+    background-color: #ffffff;
+}
+
+.tab-menu {
     background-color: #f2f2f2;
 }
 
-/* Content container */
-.content-container {
+/* コンテンツエリア */
+.content {
     display: flex;
     width: 100%;
 }
 
-/* Campaign section */
-.campaign-container {
+/* 左側キャンペーンエリア */
+.campaign {
     width: 50%;
-    background-color: #ffffff;
 }
 
-.campaign-container img {
+.campaign img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
-/* Menu section */
-.menu-container {
+/* 右側メニューエリア */
+.menu {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
+    background: #fff;
 }
 
+/* メニュー項目 */
 .menu-item {
     display: flex;
-    align-items: center;
     padding: 20px;
     border-bottom: 1px solid #e6e6e6;
+    align-items: center;
 }
 
 .menu-item:last-child {
     border-bottom: none;
 }
 
-.menu-icon {
+/* アイコン */
+.icon {
     width: 60px;
-    flex-shrink: 0;
     margin-right: 15px;
+    flex-shrink: 0;
 }
 
-.menu-icon img {
+.icon img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-.menu-text {
+/* テキスト部分 */
+.menu-content {
     flex-grow: 1;
 }
 
-.menu-title {
-    font-size: 16px;
+.title {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: 16px;
     color: #333;
 }
 
-.menu-subtitle {
+.subtitle {
     font-size: 14px;
-    color: #00a862; /* Starbucks green color */
+    color: #00a862;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .content-container {
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .content {
         flex-direction: column;
     }
     
-    .campaign-container,
-    .menu-container {
+    .campaign, .menu {
         width: 100%;
-    }
-}
-
-/* For very small screens */
-@media screen and (max-width: 480px) {
-    .menu-item {
-        padding: 15px;
-    }
-    
-    .menu-icon {
-        width: 50px;
-        margin-right: 10px;
-    }
-    
-    .menu-title {
-        font-size: 14px;
-    }
-    
-    .menu-subtitle {
-        font-size: 12px;
     }
 }
