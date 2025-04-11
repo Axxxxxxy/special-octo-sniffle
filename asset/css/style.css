@@ -58,10 +58,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 6px;
-  padding-left: 4px;
+  gap: 0px;
+  padding-left: 0px;
 }
 .btn img {
-  width: 100%;
-  height: auto;
+  width: 153px;
+  height: 74px;
 }
