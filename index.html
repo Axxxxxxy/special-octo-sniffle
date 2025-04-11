@@ -3,57 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スターバックス 母の日ギフト</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Starbucks Rich Menu</title>
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-    <div class="main-container">
-        <!-- タブ部分 -->
-        <div class="tabs">
-            <div class="tab tab-service">サービス</div>
-            <div class="tab tab-menu">商品メニュー</div>
+    <div class="container">
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <a href="service.html" class="tab tab-service">
+                <img src="images/tab_service.png" alt="サービス">
+            </a>
+            <a href="index.html" class="tab tab-menu active">
+                <img src="images/tab_menu_active.png" alt="商品メニュー">
+            </a>
         </div>
-        
-        <!-- コンテンツエリア -->
-        <div class="content">
-            <!-- 左側キャンペーンエリア -->
-            <div class="campaign">
-                <img src="images/mothers_day.jpg" alt="MOTHER'S DAY GIFT">
+
+        <!-- Main Content Container -->
+        <div class="content-container">
+            <!-- Left Column - Campaign Image -->
+            <div class="campaign-container">
+                <img src="images/mothers_day.jpg" alt="MOTHER'S DAY GIFT" class="campaign-image">
             </div>
-            
-            <!-- 右側メニューエリア -->
-            <div class="menu">
-                <!-- メニュー項目1 -->
-                <div class="menu-item">
-                    <div class="icon">
-                        <img src="images/pay.png" alt="カードアイコン">
-                    </div>
-                    <div class="menu-content">
-                        <div class="title">支払う・入金する</div>
-                        <div class="subtitle">LINE Starbucks Card</div>
-                    </div>
+
+            <!-- Right Column - Buttons -->
+            <div class="buttons-container">
+                <!-- Payment Button -->
+                <div class="button-item">
+                    <a href="#" class="button-link">
+                        <img src="images/pay.png" alt="支払う・入金する" class="button-image">
+                        <div class="button-text">
+                            <p class="button-title">支払う・入金する</p>
+                            <p class="button-subtitle">LINE Starbucks Card</p>
+                        </div>
+                    </a>
                 </div>
-                
-                <!-- メニュー項目2 -->
-                <div class="menu-item">
-                    <div class="icon">
-                        <img src="images/mobile.png" alt="モバイルアイコン">
-                    </div>
-                    <div class="menu-content">
-                        <div class="title">モバイルオーダーする</div>
-                        <div class="subtitle">LINE Starbucks Order & Pay</div>
-                    </div>
+
+                <!-- Mobile Order Button -->
+                <div class="button-item">
+                    <a href="#" class="button-link">
+                        <img src="images/mobile.png" alt="モバイルオーダーする" class="button-image">
+                        <div class="button-text">
+                            <p class="button-title">モバイルオーダーする</p>
+                            <p class="button-subtitle">LINE Starbucks Order & Pay</p>
+                        </div>
+                    </a>
                 </div>
-                
-                <!-- メニュー項目3 -->
-                <div class="menu-item">
-                    <div class="icon">
-                        <img src="images/line.png" alt="ギフトアイコン">
-                    </div>
-                    <div class="menu-content">
-                        <div class="title">LINEギフトを贈る</div>
-                        <div class="subtitle">LINE Gift</div>
-                    </div>
+
+                <!-- LINE Gift Button -->
+                <div class="button-item">
+                    <a href="#" class="button-link">
+                        <img src="images/line.png" alt="LINE ギフトを贈る" class="button-image">
+                        <div class="button-text">
+                            <p class="button-title">LINE ギフトを贈る</p>
+                            <p class="button-subtitle">LINE Gift</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
