@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -25,26 +25,27 @@ body {
 
 .tab-item {
     flex: 1;
-    display: block;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
-.tab-item img {
-    width: 100%;
-    height: auto;
-    display: block;
+.tab-item.active {
+    background-color: #f2f2f2;
 }
 
 /* Content container */
 .content-container {
     display: flex;
-    flex-direction: row;
     width: 100%;
 }
 
 /* Campaign section */
 .campaign-container {
-    flex: 1;
-    min-width: 0;
+    width: 50%;
+    background-color: #ffffff;
 }
 
 .campaign-container img {
@@ -55,14 +56,16 @@ body {
 
 /* Menu section */
 .menu-container {
-    flex: 1;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     background-color: #ffffff;
 }
 
 .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -70,18 +73,16 @@ body {
     border-bottom: none;
 }
 
-.menu-item a {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    text-decoration: none;
-    color: #333;
+.menu-icon {
+    width: 60px;
+    flex-shrink: 0;
+    margin-right: 15px;
 }
 
-.menu-item img {
-    width: 60px;
+.menu-icon img {
+    width: 100%;
     height: auto;
-    margin-right: 15px;
+    display: block;
 }
 
 .menu-text {
@@ -92,6 +93,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #333;
 }
 
 .menu-subtitle {
@@ -104,15 +106,20 @@ body {
     .content-container {
         flex-direction: column;
     }
+    
+    .campaign-container,
+    .menu-container {
+        width: 100%;
+    }
 }
 
 /* For very small screens */
 @media screen and (max-width: 480px) {
-    .menu-item a {
+    .menu-item {
         padding: 15px;
     }
     
-    .menu-item img {
+    .menu-icon {
         width: 50px;
         margin-right: 10px;
     }
