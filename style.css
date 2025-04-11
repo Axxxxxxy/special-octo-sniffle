@@ -39,7 +39,7 @@ body {
 }
 
 /* スマホ幅以外でも中央にしたい場合 */
-@media (max-width: 374px) {
+@media (max-width: 375px) {
   .wrapper {
     transform: scale(0.9);
     transform-origin: top center;
