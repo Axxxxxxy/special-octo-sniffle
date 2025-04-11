@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Starbucks Rich Menu</title>
-	<link href="asset/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIFF Layout Sample</title>
+  <link rel="stylesheet" href="asset/css/style.css" />
 </head>
 <body>
-	<div class="container">
-		<!-- Tab Navigation -->
-		<div class="tab-container">
-			<a class="tab tab-service" href="service.html"><img alt="サービス" src="images/tab_service.png"></a> <a class="tab tab-menu active" href="index.html"><img alt="商品メニュー" src="images/tab_menu_active.png"></a>
-		</div><!-- Main Content Container -->
-		<div class="content-container">
-			<!-- Left Column - Campaign Image -->
-			<div class="campaign-container"><img alt="MOTHER'S DAY GIFT" class="campaign-image" src="images/mothers_day.jpg"></div><!-- Right Column - Buttons -->
-			<div class="buttons-container">
-				<!-- Payment Button -->
-				<div class="button-item">
-					<a class="button-link" href="#"><img alt="支払う・入金する" class="button-image" src="images/pay.png"></a>
-				</div><!-- Mobile Order Button -->
-				<div class="button-item">
-					<a class="button-link" href="#"><img alt="モバイルオーダーする" class="button-image" src="images/mobile.png"></a>
-				</div><!-- LINE Gift Button -->
-				<div class="button-item">
-					<a class="button-link" href="#"><img alt="LINE ギフトを贈る" class="button-image" src="images/line.png"></a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="wrapper">
+    <!-- タブ -->
+    <div class="tabs">
+      <a href="#" class="tab"><img src="images/tab_service.png" alt="サービス" /></a>
+      <a href="#" class="tab active"><img src="images/tab_menu.png" alt="商品メニュー" /></a>
+    </div>
+
+    <div class="container">
+      <!-- 左カラム：キャンペーン画像 -->
+      <div class="left">
+        <img src="images/mothers_day.png" alt="母の日ギフト" class="main-image" />
+      </div>
+
+      <!-- 右カラム：ボタン群 -->
+      <div class="right">
+        <a href="#" class="btn"><img src="images/pay.png" alt="支払う" /></a>
+        <a href="#" class="btn"><img src="images/mobile.png" alt="モバイルオーダー" /></a>
+        <a href="#" class="btn"><img src="images/line.png" alt="LINEギフト" /></a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
