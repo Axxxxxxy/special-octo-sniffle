@@ -1,83 +1,47 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  background: #fff;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.wrapper {
+  position: relative;
+  width: 375px;
   margin: 0 auto;
 }
 
-.left {
-  width: 60%;
-}
-
-.left img {
+.main-image {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-.right {
-  width: 40%;
-  padding: 24px;
-  box-sizing: border-box;
-  background: #f6f6f6;
-}
-
-.button {
+.btn {
+  position: absolute;
+  width: 120px;
+  height: 60px;
   display: block;
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 12px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  text-decoration: none;
-  color: black;
+  text-indent: -9999px; /* 非表示 */
+  background: rgba(0, 0, 0, 0); /* 背景なし */
 }
 
-.button p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
+/* 画像上の位置（375px基準）に合わせて調整 */
+.btn1 {
+  top: 130px;
+  right: 20px;
+}
+.btn2 {
+  top: 210px;
+  right: 20px;
+}
+.btn3 {
+  top: 290px;
+  right: 20px;
 }
 
-.button span {
-  display: block;
-  font-size: 13px;
-  color: green;
-  margin-top: 4px;
-}
-
-/* ▼ モバイル対応 ▼ */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-  }
-
-  .right {
-    padding: 16px;
-  }
-
-  .button {
-    font-size: 16px;
-    padding: 14px;
-  }
-
-  .button p {
-    font-size: 16px;
-  }
-
-  .button span {
-    font-size: 14px;
+/* スマホ幅以外でも中央にしたい場合 */
+@media (max-width: 374px) {
+  .wrapper {
+    transform: scale(0.9);
+    transform-origin: top center;
   }
 }
