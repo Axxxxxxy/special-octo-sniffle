@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mother's Day Gift</title>
-  <link rel="stylesheet" href="asset/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スターバックス 母の日ギフト</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="tabs">
-      <img src="images/tab_service.png" alt="サービス" class="tab" />
-      <img src="images/tab_menu_active.png" alt="商品メニュー" class="tab" />
-    </div>
-
     <div class="container">
-      <div class="main">
-        <img src="images/mothers_day.jpg" alt="Mother's Day Gift" class="main-image" />
-      </div>
-      <div class="side">
-        <a href="#" class="btn"><img src="images/pay.png" alt="支払う・入金する" /></a>
-        <a href="#" class="btn"><img src="images/mobile.png" alt="モバイルオーダーする" /></a>
-        <a href="#" class="btn"><img src="images/line.png" alt="LINEギフトを贈る" /></a>
-      </div>
+        <div class="tab-container">
+            <a href="#" class="tab-item">
+                <img src="images/tab_service.png" alt="サービス" class="tab-img">
+            </a>
+            <a href="#" class="tab-item active">
+                <img src="images/tab_menu_active.png" alt="商品メニュー" class="tab-img">
+            </a>
+        </div>
+        
+        <div class="content-container">
+            <div class="campaign-container">
+                <img src="images/mothers_day.jpg" alt="MOTHER'S DAY GIFT" class="campaign-img">
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-item">
+                    <a href="#">
+                        <img src="images/pay.png" alt="支払う・入金する LINE Starbucks Card" class="menu-img">
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#">
+                        <img src="images/mobile.png" alt="モバイルオーダーする LINE Starbucks Order & Pay" class="menu-img">
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#">
+                        <img src="images/line.png" alt="LINEギフトを贈る LINE Gift" class="menu-img">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
