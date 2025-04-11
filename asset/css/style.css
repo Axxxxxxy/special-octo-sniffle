@@ -1,0 +1,50 @@
+/* 全体設定 */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ラッパー要素 */
+.wrapper {
+  position: relative;
+  width: 375px;
+  margin: 0 auto;
+}
+
+/* メイン画像 */
+.main-image {
+  width: 100%;
+  display: block;
+}
+
+/* ボタン共通 */
+.btn {
+  position: absolute;
+  width: 270px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 各ボタン位置調整（画像上の位置に応じて設定） */
+.btn-1 {
+  top: 220px;
+}
+.btn-2 {
+  top: 290px;
+}
+.btn-3 {
+  top: 360px;
+}
+
+/* aタグスタイル初期化 */
+a.btn {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}
