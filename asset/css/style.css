@@ -1,4 +1,4 @@
-/* 全体リセット */
+/* 全体設定 */
 body {
   margin: 0;
   padding: 0;
@@ -6,21 +6,29 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* タブエリア */
+/* タブ部分 */
 .tabs {
   display: flex;
   justify-content: center;
-  width: 100%;
+  background-color: #fff;
 }
 
-/* メイン構造 */
+.tab {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+/* コンテンツ全体の並び */
 .container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: auto;
 }
 
+/* 左画像エリア */
 .left {
   width: 60%;
 }
@@ -31,14 +39,16 @@ body {
   display: block;
 }
 
+/* 右ボタンエリア */
 .right {
   width: 40%;
   padding: 20px;
   box-sizing: border-box;
-  background: #f6f6f6;
+  background: #fff; /* ← 白背景に修正済み */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn img {
@@ -53,11 +63,16 @@ body {
     flex-direction: column;
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 100%;
   }
 
-  .right {
-    padding: 16px;
+  .tabs {
+    flex-direction: row;
+  }
+
+  .tab {
+    width: 50%;
   }
 }
