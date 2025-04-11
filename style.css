@@ -6,8 +6,8 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .left {
@@ -22,7 +22,7 @@ body {
 
 .right {
   width: 40%;
-  padding: 20px;
+  padding: 24px;
   box-sizing: border-box;
   background: #f6f6f6;
 }
@@ -42,17 +42,18 @@ body {
 
 .button p {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .button span {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   color: green;
   margin-top: 4px;
 }
 
-/* ▼ スマホ対応 ▼ */
+/* ▼ モバイル対応 ▼ */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -68,8 +69,8 @@ body {
   }
 
   .button {
+    font-size: 16px;
     padding: 14px;
-    font-size: 14px;
   }
 
   .button p {
@@ -77,6 +78,6 @@ body {
   }
 
   .button span {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
