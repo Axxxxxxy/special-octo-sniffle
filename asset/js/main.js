@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // LIFF IDを指定して初期化
-    await liff.init({ liffId: "YOUR_LIFF_ID" });
+    await liff.init({ liffId: "2007247007-nLAPoe1P" });
 
     // LIFFアプリがLINE内で開かれているかを判定
     const isInClient = liff.isInClient();
