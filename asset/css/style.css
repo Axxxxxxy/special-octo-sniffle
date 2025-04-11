@@ -1,15 +1,16 @@
-/* 全体設定 */
+/* 全体初期化 */
 body {
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ラッパー要素 */
 .wrapper {
   position: relative;
-  width: 375px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -22,29 +23,24 @@ body {
 /* ボタン共通 */
 .btn {
   position: absolute;
-  width: 270px;
-  height: 50px;
-  left: 50%;
+  width: 35%;
+  height: 15%;
+  left: 65%;
   transform: translateX(-50%);
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-/* 各ボタン位置調整（画像上の位置に応じて設定） */
-.btn-1 {
-  top: 220px;
-}
-.btn-2 {
-  top: 290px;
-}
-.btn-3 {
-  top: 360px;
-}
+/* ボタン配置（topの%は画像高さに対して調整） */
+.btn1 { top: 24%; }
+.btn2 { top: 42%; }
+.btn3 { top: 60%; }
 
-/* aタグスタイル初期化 */
-a.btn {
-  display: block;
-  text-indent: -9999px;
-  overflow: hidden;
+/* オプション：スマホでホバーしないように */
+@media (hover: hover) {
+  .btn:hover {
+    outline: 2px solid rgba(0, 128, 0, 0.4);
+    border-radius: 8px;
+  }
 }
