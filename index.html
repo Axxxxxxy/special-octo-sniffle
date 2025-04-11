@@ -1,72 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mother's Day Gift</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .left {
-      width: 60%;
-    }
-
-    .left img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .right {
-      width: 40%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      margin-bottom: 12px;
-      background-color: #007042;
-      color: white;
-      text-align: center;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .left, .right {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="tab">
+    <div class="active">サービス</div>
+    <div>商品メニュー</div>
+  </div>
   <div class="container">
     <div class="left">
-      <img src="mothers_day.jpg" alt="Mother's Day Gift" />
+      <img src="mothers_day.jpg" alt="Mother's Day Gift">
     </div>
     <div class="right">
-      <a class="button" href="#">支払う・入金する</a>
-      <a class="button" href="#">モバイルオーダーする</a>
-      <a class="button" href="#">LINEギフトを贈る</a>
+      <a href="#" class="button">
+        支払う・入金する<br><span>LINE Starbucks Card</span>
+      </a>
+      <a href="#" class="button">
+        モバイルオーダーする<br><span>LINE Starbucks Order & Pay</span>
+      </a>
+      <a href="#" class="button">
+        LINEギフトを贈る<br><span>LINE Gift</span>
+      </a>
     </div>
   </div>
 </body>
