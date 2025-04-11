@@ -58,8 +58,6 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0px;
-  padding-left: 0px;
 }
 .btn img {
   width: 153px;
