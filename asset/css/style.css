@@ -1,16 +1,22 @@
-/* 全体設定 */
+/* 全体レイアウト */
 body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
   background: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* タブ部分 */
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* タブ */
 .tabs {
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 
 .tab {
@@ -20,59 +26,56 @@ body {
   display: block;
 }
 
-/* コンテンツ全体の並び */
+/* メインコンテンツ */
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
 }
 
-/* 左画像エリア */
+/* 左の背景画像 */
 .left {
   width: 60%;
 }
-
 .left img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* 右ボタンエリア */
+/* 右のボタン画像 */
 .right {
   width: 40%;
-  padding: 20px;
+  background-color: #fff;
+  padding: 20px 10px;
   box-sizing: border-box;
-  background: #fff; /* ← 白背景に修正済み */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
 }
-
-.btn img {
+.right a img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
+/* スマホ対応：最小幅375px対応 */
+@media (max-width: 767px) {
   .container {
-    flex-direction: column;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-  }
-
-  .tabs {
     flex-direction: row;
   }
 
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    padding: 20px;
+  }
+
   .tab {
+    max-width: none;
     width: 50%;
   }
 }
