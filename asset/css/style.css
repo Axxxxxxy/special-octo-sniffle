@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* ベースリセット */
 
 * {
 	margin: 0;
@@ -6,21 +6,10 @@
 	box-sizing: border-box;
 }
 body {
+	background: #fff;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	background-color: white;
-	color: #333;
-	line-height: 1.6;
 }
-img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-/* Container styles */
+/* コンテナ全体 */
 
 .container {
 	max-width: 1000px;
@@ -29,116 +18,88 @@ a {
 	display: flex;
 	flex-direction: column;
 }
-/* Tab navigation styles */
+/* タブ */
 
 .tab-container {
 	display: flex;
 	width: 100%;
-	background-color: #fff;
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #f2f2f2;
 }
 .tab {
 	flex: 1;
-	text-align: center;
-	padding: 0;
-	background-color: #f5f5f5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50px;
-}
-.tab.active {
-	background-color: #e9e9e9;
 }
 .tab img {
 	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-/* Main content container styles */
-
-.content-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-/* Campaign image container */
-
-.campaign-container {
-	width: 100%;
-}
-.campaign-image {
-	width: 100%;
+	height: auto;
 	display: block;
 }
-/* Buttons container */
+.tab.active {
+	background-color: #fff;
+}
+/* メインレイアウト */
 
-.buttons-container {
+.main {
+	display: flex;
+	flex-direction: column;
+}
+.main-left, .main-right {
 	width: 100%;
-	padding: 0;
 }
-/* Individual button styles */
+/* 左カラム（画像） */
 
-.button-item {
-	margin: 0;
-	padding: 0;
-	border-bottom: 1px solid #e9e9e9;
+.main-image {
+	width: 100%;
+	height: auto;
+	display: block;
 }
-.button-item:last-child {
+/* 右カラム（ボタン） */
+
+.main-right {
+	background: #fff;
+	padding: 0;
+}
+.main-right a {
+	display: block;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+.main-right a:last-child {
 	border-bottom: none;
 }
-.button-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 15px 0;
+.button-img {
+	display: block;
+	margin: 0 auto;
+	width: 140px;
+	height: auto;
 }
-.button-image {
-	width: 80px;
-	height: 80px;
-	object-fit: contain;
-}
-/* Media query for tablet and desktop */
+/* 横並びに切り替えるメディアクエリ */
 
 @media (min-width: 768px) {
-	.content-container {
+	.main {
 		flex-direction: row;
 	}
-	.campaign-container {
+	.main-left, .main-right {
 		width: 50%;
 	}
-	.buttons-container {
-		width: 50%;
-	}
-	.button-item {
-		height: calc(100% / 3);
+	.main-right {
 		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
 		align-items: center;
-		justify-content: center;
 	}
-	.button-link {
-		height: 100%;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.main-right a {
+		padding: 30px 0;
+		border-bottom: none;
 	}
-	.button-image {
-		width: 90px;
-		height: 90px;
+	.button-img {
+		width: 160px;
 	}
 }
-/* For larger screens */
+/* タブの高さ調整（大画面用） */
 
 @media (min-width: 1000px) {
-	.tab {
+	.tab img {
 		height: 60px;
-	}
-	.button-image {
-		width: 100px;
-		height: 100px;
+		object-fit: contain;
 	}
 }
