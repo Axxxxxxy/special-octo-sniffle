@@ -1,52 +1,48 @@
-// LIFF SDKの初期化
+// LIFF SDKの初期化とタブ切り替え
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // LIFF IDを指定して初期化
+    // LIFF初期化
     await liff.init({ liffId: "2007247007-nLAPoe1P" });
 
-    // LIFFアプリがLINE内で開かれているかを判定
+    // デバイス判定
     const isInClient = liff.isInClient();
-    console.log("Is in LINE client:", isInClient);
-
-    // OSの判定
     const os = liff.getOS();
+    console.log("Is in LINE client:", isInClient);
     console.log("Operating System:", os);
 
-    // タブ切り替え処理
+    // タブの切り替え機能
     const tabs = document.querySelectorAll(".tab");
-    const currentPath = window.location.pathname;
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", (e) => {
-        e.preventDefault();
-        const href = tab.getAttribute("href");
-        if (href) {
-          window.location.href = href;
+        e.preventDefault(); // リンク無効化
+
+        // すべてのタブを非アクティブにし、画像を_offに戻す
+        tabs.forEach((t) => {
+          t.classList.remove("active");
+
+          const img = t.querySelector("img");
+          if (img) {
+            const src = img.getAttribute("src");
+            img.setAttribute("src", src.replace("_active", ""));
+          }
+        });
+
+        // クリックされたタブをアクティブに、画像も_activeに
+        tab.classList.add("active");
+
+        const img = tab.querySelector("img");
+        if (img) {
+          const src = img.getAttribute("src");
+          if (!src.includes("_active")) {
+            const ext = src.slice(src.lastIndexOf("."));
+            const base = src.slice(0, src.lastIndexOf("."));
+            img.setAttribute("src", `${base}_active${ext}`);
+          }
         }
       });
-
-      const img = tab.querySelector("img");
-      const isActive = tab.classList.contains("active");
-
-      if (tab.getAttribute("href") && currentPath.includes(tab.getAttribute("href"))) {
-        tab.classList.add("active");
-        // タブの画像を active 画像に差し替え
-        if (img && img.src.includes("tab_service.png")) {
-          img.src = "images/tab_service_active.png";
-        } else if (img && img.src.includes("tab_menu.png")) {
-          img.src = "images/tab_menu_active.png";
-        }
-      } else {
-        tab.classList.remove("active");
-        // タブの画像を inactive に戻す
-        if (img && img.src.includes("tab_service_active.png")) {
-          img.src = "images/tab_service.png";
-        } else if (img && img.src.includes("tab_menu_active.png")) {
-          img.src = "images/tab_menu.png";
-        }
-      }
     });
   } catch (error) {
-    console.error("LIFF Initialization failed", error);
+    console.error("LIFF initialization failed", error);
   }
 });
