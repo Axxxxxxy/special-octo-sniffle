@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const os = liff.getOS();
     console.log("Operating System:", os);
 
-    // タブボタンの切り替え処理
+    // タブ切り替え処理
     const tabs = document.querySelectorAll(".tab");
     const currentPath = window.location.pathname;
 
@@ -20,14 +20,30 @@ document.addEventListener("DOMContentLoaded", async () => {
       tab.addEventListener("click", (e) => {
         e.preventDefault();
         const href = tab.getAttribute("href");
-        window.location.href = href;
+        if (href) {
+          window.location.href = href;
+        }
       });
 
-      // 現在のパスに応じてactiveクラスを付与
+      const img = tab.querySelector("img");
+      const isActive = tab.classList.contains("active");
+
       if (tab.getAttribute("href") && currentPath.includes(tab.getAttribute("href"))) {
         tab.classList.add("active");
+        // タブの画像を active 画像に差し替え
+        if (img && img.src.includes("tab_service.png")) {
+          img.src = "images/tab_service_active.png";
+        } else if (img && img.src.includes("tab_menu.png")) {
+          img.src = "images/tab_menu_active.png";
+        }
       } else {
         tab.classList.remove("active");
+        // タブの画像を inactive に戻す
+        if (img && img.src.includes("tab_service_active.png")) {
+          img.src = "images/tab_service.png";
+        } else if (img && img.src.includes("tab_menu_active.png")) {
+          img.src = "images/tab_menu.png";
+        }
       }
     });
   } catch (error) {
