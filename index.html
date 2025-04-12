@@ -4,31 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LIFF Layout Sample</title>
-  <!-- LIFF SDKの読み込み -->
-<script src="/special-octo-sniffle/asset/js/main.js?v=20250412" defer></script>
-<link rel="stylesheet" href="/special-octo-sniffle/asset/css/style.css?v=20250412" />
+
+  <!-- LIFF SDKとJavaScriptの読み込み -->
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="/special-octo-sniffle/asset/js/main.js?v=20250413" defer></script>
+
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="/special-octo-sniffle/asset/css/style.css?v=20250413" />
 </head>
 <body>
-  <div class="wrapper">
-    <!-- タブ -->
-    <div class="tabs">
-      <a href="#" class="tab tab-service"><img src="images/tab_service_active.png" alt="サービス" /></a>
-      <a href="#" class="tab tab-menu"><img src="images/tab_menu.png" alt="商品メニュー" /></a>
-    </div>
+  <!-- タブ -->
+  <div class="tabs">
+    <a href="#" class="tab tab-service active"><img src="images/tab_service_active.png" alt="サービス" /></a>
+    <a href="#" class="tab tab-menu"><img src="images/tab_menu.png" alt="商品メニュー" /></a>
+  </div>
 
-    <div class="container">
-      <!-- 左カラム：キャンペーン画像 -->
-      <div class="left">
-        <img src="images/mothers_day.jpg" alt="母の日ギフト" class="main-image" />
-      </div>
-
-      <!-- 右カラム：ボタン群 -->
-      <div class="right">
-        <a href="#" class="btn"><img src="images/pay.png" alt="支払う" /></a>
-        <a href="#" class="btn"><img src="images/mobile.png" alt="モバイルオーダー" /></a>
-        <a href="#" class="btn"><img src="images/line.png" alt="LINEギフト" /></a>
-      </div>
+  <!-- 表示内容 -->
+  <div class="content service-view">
+    <img src="images/mothers_day.jpg" alt="母の日ギフト" />
+    <div class="buttons">
+      <a href="#"><img src="images/pay.png" /></a>
+      <a href="#"><img src="images/mobile.png" /></a>
+      <a href="#"><img src="images/line.png" /></a>
     </div>
+  </div>
+
+  <div class="content menu-view hidden">
+    <img src="images/mothers_day.jpg" alt="商品メニュー" />
+    <p>こちらは商品メニューの内容です。</p>
   </div>
 </body>
 </html>
