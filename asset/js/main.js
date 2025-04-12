@@ -1,31 +1,50 @@
-// LIFF SDKの初期化とタブ切り替え処理
+// LIFF SDKの初期化
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // LIFF初期化（あなたのIDに書き換えてください）
+    // LIFF ID を指定して初期化
     await liff.init({ liffId: "2007247007-nLAPoe1P" });
 
-    // デバイス判定
+    // LINEクライアント内かを判定
     const isInClient = liff.isInClient();
-    const os = liff.getOS();
     console.log("Is in LINE client:", isInClient);
+
+    // OS判定
+    const os = liff.getOS();
     console.log("Operating System:", os);
 
-    // タブ切り替え処理
+    // タブ切り替えロジック
     const tabs = document.querySelectorAll(".tab");
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", (e) => {
-        e.preventDefault(); // リンク無効化
+        e.preventDefault();
 
-        // すべてのタブを非アクティブに
+        // すべてのタブを非アクティブにする
         tabs.forEach((t) => {
           t.classList.remove("active");
-
           const img = t.querySelector("img");
           if (img) {
             img.src = img.src.replace("_active", "");
           }
         });
 
-        // クリックされたタブをアクティブに
+        // 押されたタブだけアクティブに
         tab.classList.add("active");
+        const img = tab.querySelector("img");
+        if (img) {
+          img.src = img.src.replace(".png", "_active.png");
+        }
+      });
+    });
+
+    // ▼ 初期状態：サービスタブを活性化
+    const defaultServiceTab = document.querySelector('.tab img[src*="tab_service.png"]');
+    if (defaultServiceTab) {
+      defaultServiceTab.src = "images/tab_service_active.png";
+      defaultServiceTab.closest(".tab").classList.add("active");
+    }
+
+  } catch (error) {
+    console.error("LIFF Initialization failed:", error);
+  }
+});
