@@ -9,12 +9,22 @@
   <button onclick="getUserId()">ユーザーIDを取得</button>
   <p id="output"></p>
 
-  <script>
-    async function getUserId() {
-      await liff.init({ liffId: 'ここにあなたのLIFF ID' });
-      const profile = await liff.getProfile();
-      document.getElementById('output').textContent = `userId: ${profile.userId}`;
+<script>
+    async function main() {
+      await liff.init({ liffId: "2007283167-K0EjBYae" }); // ★あなたのLIFF IDに置き換えて！
     }
+
+    async function getUserId() {
+      if (!liff.isLoggedIn()) {
+        liff.login();
+      } else {
+        const profile = await liff.getProfile();
+        alert("ユーザーID: " + profile.userId);
+        // Claudeに渡す処理をここに追加
+      }
+    }
+
+    main();
   </script>
 </body>
 </html>
