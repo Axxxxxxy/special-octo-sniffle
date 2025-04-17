@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIFF Layout Sample</title>
-  <!-- LIFF SDKの読み込み -->
-<script src="/special-octo-sniffle/asset/js/main.js?v=20250412" defer></script>
-<link rel="stylesheet" href="/special-octo-sniffle/asset/css/style.css?v=20250412" />
+  <title>LIFF UserID取得</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <!-- タブ -->
-    <div class="tabs">
-      <a href="#" class="tab tab-service"><img src="images/tab_service_active.png" alt="サービス" /></a>
-      <a href="#" class="tab tab-menu"><img src="images/tab_menu.png" alt="商品メニュー" /></a>
-    </div>
+  <h1>こんにちは！</h1>
+  <button onclick="getUserId()">ユーザーIDを取得</button>
+  <p id="output"></p>
 
-    <div class="container">
-      <!-- 左カラム：キャンペーン画像 -->
-      <div class="left">
-        <img src="images/mothers_day.jpg" alt="母の日ギフト" class="main-image" />
-      </div>
-
-      <!-- 右カラム：ボタン群 -->
-      <div class="right">
-        <a href="#" class="btn"><img src="images/pay.png" alt="支払う" /></a>
-        <a href="#" class="btn"><img src="images/mobile.png" alt="モバイルオーダー" /></a>
-        <a href="#" class="btn"><img src="images/line.png" alt="LINEギフト" /></a>
-      </div>
-    </div>
-  </div>
+  <script>
+    async function getUserId() {
+      await liff.init({ liffId: 'ここにあなたのLIFF ID' });
+      const profile = await liff.getProfile();
+      document.getElementById('output').textContent = `userId: ${profile.userId}`;
+    }
+  </script>
 </body>
 </html>
